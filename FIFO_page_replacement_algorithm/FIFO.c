@@ -46,9 +46,9 @@ int main()
   printf("Pages in the frames of main memory:\n");
   int page_faults=FIFO(pages,n_pages,n_frames);
   printf("\nNumber of page_faults : %d",page_faults);
-  float missrate=(float)page_faults/n_pages;
-  printf("\nMiss Rate : %f",missrate);
+  float missratio=(float)page_faults/n_pages;
+  printf("\nMiss ratio : %f",missratio);
   printf("\nNumber of hits : %d",n_pages-page_faults);
-  printf("\nHit Rate : %f\n",1-missrate);
+  printf("\nHit ratio : %f\n",1-missratio);
   return 0;
 }
