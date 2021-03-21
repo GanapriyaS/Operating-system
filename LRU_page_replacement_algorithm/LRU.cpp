@@ -60,8 +60,8 @@ int main()
   }
   int page_faults=LRU(pages,n_pages,n_frames);
   cout<<"Number of page_faults : "<<page_faults;
-  cout<<"\nMiss Rate : "<<(float)page_faults/n_pages;
+  cout<<"\nMiss ratio : "<<(float)page_faults/n_pages;
   cout<<"\nNumber of hits : "<<n_pages-page_faults;
-  cout<<"\nHit Rate : "<<1-((float)page_faults/n_pages);
+  cout<<"\nHit ratio : "<<1-((float)page_faults/n_pages);
   return 0;
 }
