@@ -2,7 +2,7 @@
 int main()
 {
   int p,r;
-  printf("Enter no of processes : ");
+  printf("Enter no of processors : ");
   scanf("%d",&p);
   printf("Enter no of resources : ");
   scanf("%d",&r);
@@ -41,11 +41,9 @@ int main()
   flag[i]=0;
 }
   int x=0;
-printf("Availabel resources after releasing :\n");
-int flag2=0;
-while(flag2)
-{ 
-  flag2=0;
+printf("Available resources after releasing :\n");
+for(int o=0;o<p;o++)
+{
   for(int i=0;i<p;i++)
   {
     if(flag[i]==0)
@@ -64,14 +62,16 @@ while(flag2)
       if(!flag1)
       {
         for(int k=0;k<r;k++)
-        {   
-            flag2=1;
+        {
             avail[k]=avail[k]+allocated[i][k];
 
         }
-
-          printf("P%d : %d %d %d\n",i,avail[0],avail[1],avail[2]);
-
+          printf("P%d : ",i);
+          for(int h=0;h<r;h++)
+          {
+            printf("%d ",avail[h]);
+          }
+          printf("\n");
         flag[i]=1;
         result[x]=i;
         x=x+1;
@@ -82,7 +82,7 @@ while(flag2)
   int b=0;
   for(int i=0;i<p;i++)
   {
-    if(flag[i]==0)
+    if(flag==0)
     {
       printf("Deadlock occured! System is in safety state.");
       b=1;
