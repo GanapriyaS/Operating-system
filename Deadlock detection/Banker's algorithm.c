@@ -85,7 +85,7 @@ while(flag2)
   int b=0;
   for(int i=0;i<p;i++)
   {
-    if(flag==0)
+    if(flag[i]==0)
     {
       printf("Deadlock occured! System is in safety state.");
       b=1;
