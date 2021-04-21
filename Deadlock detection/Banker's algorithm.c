@@ -42,8 +42,10 @@ int main()
 }
   int x=0;
 printf("Availabel resources after releasing :\n");
-for(int o=0;o<p;o++)
-{
+int flag2=0;
+while(flag2)
+{ 
+  flag2=0;
   for(int i=0;i<p;i++)
   {
     if(flag[i]==0)
@@ -62,7 +64,8 @@ for(int o=0;o<p;o++)
       if(!flag1)
       {
         for(int k=0;k<r;k++)
-        {
+        {   
+            flag2=1;
             avail[k]=avail[k]+allocated[i][k];
 
         }
