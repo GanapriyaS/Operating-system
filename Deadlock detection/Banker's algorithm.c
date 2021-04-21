@@ -2,7 +2,7 @@
 int main()
 {
   int p,r;
-  printf("Enter no of processors : ");
+  printf("Enter no of processes : ");
   scanf("%d",&p);
   printf("Enter no of resources : ");
   scanf("%d",&r);
