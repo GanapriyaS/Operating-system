@@ -42,7 +42,7 @@ int main()
 }
   int x=0;
 printf("Availabel resources after releasing :\n");
-for(int o=0;o<r;o++)
+for(int o=0;o<p;o++)
 {
   for(int i=0;i<p;i++)
   {
