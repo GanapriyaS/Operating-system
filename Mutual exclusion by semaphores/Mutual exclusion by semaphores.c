@@ -34,7 +34,7 @@ void addWrite()
   if(semaphore[0]>0)
   {
     printf("\nWriter process added\n");
-    semaphore[3]++;
+    semaphore[3]=1;
     semaphore[0]--;
   }
   else if(semaphore[3]) {
@@ -54,7 +54,7 @@ void removeWrite()
   {
     printf("\nWriter removed\n");
     semaphore[0]++;
-    semaphore[3]--;
+    semaphore[3]=0;
   }
   if(semaphore[2]>0)
   {
