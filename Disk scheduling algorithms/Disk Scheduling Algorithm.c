@@ -75,12 +75,7 @@ void SSTF(int working_seq[],int request_no,int head,int request_seq[])
   for(int i=1;i<request_no;i++)
     tot+=(abs(working_seq[i]-working_seq[i-1]));
 
-  for(int i=request_no-1;i>0;i--)
-  {
-    working_seq[i]=working_seq[i-1];
-  }
-  working_seq[0]=temp;
-  display(working_seq,request_no,tot,head);
+  display(working_seq,request_no,tot,temp);
 }
 
 void SCAN(int request_no,int head,int request_seq[])
